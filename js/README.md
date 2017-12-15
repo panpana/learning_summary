@@ -30,3 +30,30 @@ mouseover/mouseout在原生JS中一直都是有的，也就是onmouseover和onmo
 ##### 2. 鼠标移出时，触发mousemove、mouseleave和mouseout事件
 所有浏览器的顺序都是(1)mousemove、(2)mouseout和(3)mouseleave事件
 
+
+### 2.数组、对象、字符串常用转换
+#### 1.记录一种将数组转换成对象的方法：
+
+一般对于一个表格的数据后端一般是返回一个对象数组给前端，但是如果前端需要的是一个大对象做另外一些处理。这个时候可以：
+
+```
+// res是返回来的数组
+const data = {};
+Object.keys(res).forEach(item => {
+data[item] = res[item];
+});
+```
+这里介绍一下 Object.keys 这个方法。根据 MDN
+
+> Object.keys() 方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 for...in 循环遍历该对象时返回的顺序一致 （两者的主要区别是 一个 for-in 循环还会枚举其原型链上的属性）。
+
+举个例子：
+const data = [];
+let i = 0;
+for (let prop in selected) {
+  if (selected.hasOwnProperty(prop)) {
+    data[i++] = selected[prop];
+  }
+}
+```
+

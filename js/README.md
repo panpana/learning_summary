@@ -57,4 +57,51 @@ for (let prop in selected) {
   }
 }
 ```
+#### 3.记录一些经常容易忘记的 api
 
+对于字符串
+
+##### 1.slice(beginSlice[, endSlice])
+
+1.索引（以 0 为基数）截取一个字符串并返回新的字符串，参数是负数的时候相当于 length+endSlice
+```
+var str1 = 'The morning is upon us.';
+var str2 = str1.slice(4, -2); // 不包含倒数第二个字符串
+
+console.log(str2); // OUTPUT: morning is upon u
+```
+
+对于数组
+
+##### 1.slice()
+
+包含开始位置不包含结束位置地浅拷贝一份数组，并返回新数组
+```
+var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var citrus = fruits.slice(1, 3);
+
+// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+// citrus contains ['Orange','Lemon']
+```
+
+##### 2.splice
+
+splice() 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。不返回新的数组，在原数组上面操作
+```
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+myFish.splice(2, 0, 'drum'); // 在索引为2的位置插入'drum'
+// myFish 变为 ["angel", "clown", "drum", "mandarin", "sturgeon"]
+
+myFish.splice(2, 1); // 从索引为2的位置删除一项（也就是'drum'这一项）
+// myFish 变为 ["angel", "clown", "mandarin", "sturgeon"]
+
+```
+
+##### 3.find ／ findIndex
+
+对数组进行遍历找到满足测试函数的第一个元素的值/索引
+
+##### 4.filter
+
+方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。

@@ -18,4 +18,4 @@
 我的写法： [answer](https://github.com/fengye9729/LeetCode/blob/master/Easy/Count%20and%20Say.js)
 
 ### 学习参考
-[写递归函数的正确思维方法](http://blog.csdn.net/vagrxie/article/details/8470798) 
+[写递归函数的正确思维方法](http://blog.csdn.net/vagrxie/article/details/8470798)   

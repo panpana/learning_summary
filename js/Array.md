@@ -85,4 +85,3 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 
 ### 【参考】
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
-[之前整理的学习ES6:数组的扩展](https://fengye9729.github.io/learning-ES6/#/docs/Array)
